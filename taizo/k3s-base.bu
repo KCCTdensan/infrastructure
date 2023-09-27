@@ -1,0 +1,37 @@
+variant: fcos
+version: 1.5.0
+storage:
+  files:
+    - path: /usr/local/bin/k3s
+      overwrite: true
+      mode: 0755
+      contents:
+        source: https://github.com/k3s-io/k3s/releases/download/v1.27.4%2Bk3s1/k3s
+        verification:
+          hash: sha256-7438aade7f5aaab3904f95333b67aa072cee28fa06748b6ee66ebcbd3e5b6bd3
+    - path: /etc/yum.repos.d/rancher-k3s-common.repo
+      contents:
+        inline: |
+          [rancher-k3s-common-stable]
+          name=Rancher K3s Common (stable)
+          baseurl=https://rpm.rancher.io/k3s/stable/common/coreos/noarch
+          enabled=1
+          gpgcheck=1
+          repo_gpgcheck=0
+          gpgkey=https://rpm.rancher.io/public.key
+systemd:
+  units:
+    - name: install-k3s.service
+      enabled: true
+      contents: |
+        [Unit]
+        Requires=network-online.target
+        After=network-online.target
+        ConditionFirstBoot=yes
+
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/bin/rpm-ostree install -A k3s-selinux
+
+        [Install]
+        WantedBy=multi-user.target
