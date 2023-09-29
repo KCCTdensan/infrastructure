@@ -1,6 +1,6 @@
 # infrastructure
 
-## taizo
+## hard/taizo
 
 makeして出てくるやつ(下記)をそれぞれCoreOSに食わせる
 
