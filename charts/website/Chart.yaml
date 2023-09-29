@@ -1,0 +1,6 @@
+apiVersion: v2
+name: website
+description: 電算部公式ウェブサイト
+type: application
+version: 0.1.0
+appVersion: "2.3.0"
