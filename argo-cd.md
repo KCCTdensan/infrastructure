@@ -5,6 +5,7 @@
 fishではこうやる:
 
 ```fish
+helm repo add argo https://argoproj.github.io/argo-helm
 for crd in "applications.argoproj.io" "applicationsets.argoproj.io" "appprojects.argoproj.io"
   kubectl annotate --overwrite crd $crd meta.helm.sh/release-namespace=argo-cd
 end
