@@ -1,6 +1,10 @@
 apiVersion: v2
 name: website
+version: 0.1.0
 description: 電算部公式ウェブサイト
 type: application
-version: 0.1.0
-appVersion: "2.3.0"
+dependencies:
+  - name: cloudflare-tunnel
+    version: 0.3.0
+    repository: https://cloudflare.github.io/helm-charts
+appVersion: 2.3.0
