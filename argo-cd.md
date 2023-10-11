@@ -5,9 +5,10 @@
 fishではこうやる:
 
 ```fish
+helm repo update
 helm repo add argo https://argoproj.github.io/argo-helm
+helm upgrade -i --create-namespace -n argo-cd argo-cd argo/argo-cd
 for crd in "applications.argoproj.io" "applicationsets.argoproj.io" "appprojects.argoproj.io"
   kubectl annotate --overwrite crd $crd meta.helm.sh/release-namespace=argo-cd
 end
-helm install --create-namespace -n argo-cd argo-cd argo/argo-cd
 ```

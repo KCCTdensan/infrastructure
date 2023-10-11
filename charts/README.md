@@ -3,6 +3,7 @@
 ## website
 
 ```
+% helm repo update
 % helm repo add kcctdensan https://kcctdensan.github.io/infrastructure
-% helm install --create-namespace -n d3bu d3bu kcctdensan/website
+% helm upgrade -i --create-namespace -n kcctdensan kcctdensan kcctdensan/website -f hoge.yaml
 ```

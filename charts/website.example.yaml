@@ -1,0 +1,14 @@
+config:
+  api_base: https://example.net/hoge
+
+cloudflare-tunnel:
+  cloudflare:
+    # cloudflared tunnel login
+    account: "hogehoge"
+    # cloudflared tunnel create hoge-fuga-piyo
+    tunnelName: "hogehoge"
+    tunnelId: "hogehoge"
+    secret: "hogehoge"
+    ingress:
+      - hostname: d3bu.net
+        service: http://website.kcctdensan.svc.cluster.local:3000
