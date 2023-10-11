@@ -3,6 +3,20 @@ entries:
   website:
   - apiVersion: v2
     appVersion: 2.3.0
+    created: "2023-10-11T10:45:20.293502837Z"
+    dependencies:
+    - name: cloudflare-tunnel
+      repository: https://cloudflare.github.io/helm-charts
+      version: 0.3.0
+    description: 電算部公式ウェブサイト
+    digest: 16a4f1358aec37c1a58ed440a64210b7d8ea75e778bbdf3afe4e965d72b515dd
+    name: website
+    type: application
+    urls:
+    - website-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.3.0
     created: "2023-10-10T23:32:06.046591294Z"
     dependencies:
     - name: cloudflare-tunnel
@@ -15,4 +29,4 @@ entries:
     urls:
     - website-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-10T23:32:06.046596894Z"
+generated: "2023-10-11T10:45:20.293509937Z"
