@@ -1,6 +1,6 @@
 apiVersion: v2
 name: website
-version: 0.3.0
+version: 0.3.1
 description: 電算部公式ウェブサイト
 type: application
 dependencies:
