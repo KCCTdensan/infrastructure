@@ -8,6 +8,7 @@ ignition:
       - local: users.ign
       - local: k3s-base.ign
       - local: k3s-server.ign
+      - local: iscsi.ign
 storage:
   files:
     - path: /etc/hostname
